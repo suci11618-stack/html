@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suci Rahmawati | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:
+    radial-gradient(circle at top right,#7c3aed40,transparent 25%),
+    radial-gradient(circle at bottom left,#06b6d440,transparent 25%);
+    z-index:-1;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter:blur(15px);
+    background:rgba(15,23,42,.6);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#dbeafe;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+section{
+    padding:100px 8%;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-text h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:linear-gradient(135deg,#06b6d4,#7c3aed);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.profile{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#06b6d4,#7c3aed);
+    padding:8px;
+}
+
+.profile-inner{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:#1e293b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:120px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:2.5rem;
+}
+
+.title p{
+    color:#94a3b8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.timeline{
+    position:relative;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:20px;
+    top:0;
+    width:2px;
+    height:100%;
+    background:#38bdf8;
+}
+
+.item{
+    position:relative;
+    margin-left:60px;
+    margin-bottom:40px;
+    background:rgba(255,255,255,.05);
+    padding:20px;
+    border-radius:15px;
+}
+
+.item::before{
+    content:'';
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#38bdf8;
+    border-radius:50%;
+    left:-49px;
+    top:25px;
+}
+
+.item h4{
+    color:#38bdf8;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.skill{
+    padding:12px 20px;
+    background:rgba(255,255,255,.08);
+    border-radius:50px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#cbd5e1;
+    margin:15px 0;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:100px;
+}
+
+.hero-text h1{
+    font-size:3rem;
+}
+
+.profile{
+    width:280px;
+    height:280px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<nav>
+    <div class="logo">Suci Rahmawati</div>
+
+    <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#experience">Pengalaman</a></li>
+        <li><a href="#achievement">Pencapaian</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h3>Halo, Saya</h3>
+        <h1>Suci Rahmawati</h1>
+        <p>
+            Mahasiswa yang memiliki minat besar dalam teknologi digital,
+            pengembangan web, desain UI/UX, dan inovasi kreatif.
+            Berkomitmen untuk terus belajar dan menciptakan solusi yang
+            memberikan dampak positif melalui teknologi.
+        </p>
+
+        <a href="#about" class="btn">Lihat Portofolio</a>
+    </div>
+
+    <div class="profile">
+        <div class="profile-inner">
+            👩
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="title">
+        <h2>Tentang Saya</h2>
+        <p>Profil Singkat</p>
+    </div>
+
+    <div class="card">
+        <p>
+            Saya adalah mahasiswa yang aktif dalam berbagai kegiatan akademik
+            maupun organisasi. Memiliki ketertarikan pada dunia teknologi,
+            desain digital, dan pengembangan produk berbasis web. Selama masa
+            studi, saya sering terlibat dalam proyek kolaboratif yang berfokus
+            pada inovasi digital dan pengembangan solusi kreatif untuk berbagai
+            kebutuhan masyarakat.
+        </p>
+        <br>
+
+        <p>
+            <strong>Nama:</strong> Suci Rahmawati <br>
+            <strong>Jenis Kelamin:</strong> Perempuan <br>
+            <strong>Pekerjaan:</strong> Mahasiswa <br>
+            <strong>Alamat:</strong> Makassar, Sulawesi Selatan (Fiktif) <br>
+            <strong>Email:</strong> suci.rahmawati@example.com (Fiktif)
+        </p>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="title">
+        <h2>Pengalaman Kerja</h2>
+        <p>Data Fiktif</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="item">
+            <h4>2025 - Sekarang</h4>
+            <h3>Junior Web Developer Intern</h3>
+            <p>
+                Berpartisipasi dalam pengembangan website perusahaan,
+                melakukan optimasi antarmuka pengguna, dan membantu
+                implementasi fitur berbasis HTML, CSS, JavaScript,
+                serta integrasi API.
+            </p>
+        </div>
+
+        <div class="item">
+            <h4>2024 - 2025</h4>
+            <h3>UI/UX Design Assistant</h3>
+            <p>
+                Membantu tim desain membuat wireframe, prototype,
+                serta melakukan riset pengalaman pengguna untuk
+                meningkatkan kualitas produk digital.
+            </p>
+        </div>
+
+        <div class="item">
+            <h4>2023 - 2024</h4>
+            <h3>Freelance Content Creator</h3>
+            <p>
+                Mengelola konten media sosial, membuat desain visual,
+                serta mengembangkan strategi branding digital untuk
+                berbagai UMKM lokal.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="achievement">
+    <div class="title">
+        <h2>Pencapaian & Karier</h2>
+        <p>Prestasi Fiktif</p>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🥇 Juara 1 Kompetisi Inovasi Digital</h3>
+            <p>
+                Meraih penghargaan tingkat nasional dalam kompetisi
+                pengembangan aplikasi berbasis teknologi untuk pendidikan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Best Student Project</h3>
+            <p>
+                Mengembangkan platform digital yang berhasil menjadi
+                proyek terbaik di fakultas selama dua tahun berturut-turut.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌟 Speaker Seminar Teknologi</h3>
+            <p>
+                Menjadi pembicara muda dalam berbagai seminar dan workshop
+                mengenai teknologi digital dan pengembangan karier mahasiswa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Startup Innovation Program</h3>
+            <p>
+                Terpilih sebagai peserta program inkubasi startup yang
+                berfokus pada solusi teknologi untuk sektor pendidikan.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <div class="title">
+        <h2>Keahlian</h2>
+        <p>Skill Fiktif</p>
+    </div>
+
+    <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">UI/UX Design</div>
+        <div class="skill">Figma</div>
+        <div class="skill">Public Speaking</div>
+        <div class="skill">Project Management</div>
+        <div class="skill">Content Creation</div>
+        <div class="skill">Digital Marketing</div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="title">
+        <h2>Kontak</h2>
+        <p>Informasi Fiktif</p>
+    </div>
+
+    <div class="card contact">
+        <h3>Mari Terhubung</h3>
+        <p>Email: suci.rahmawati@example.com</p>
+        <p>LinkedIn: linkedin.com/in/sucirahmawati</p>
+        <p>Instagram: @suci.rahmawati</p>
+        <p>Lokasi: Makassar, Sulawesi Selatan</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Suci Rahmawati — Portfolio Website
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({
+            behavior:'smooth'
+        });
+    });
+});
+</script>
+
+</body>
+</html>
